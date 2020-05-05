@@ -9,7 +9,7 @@ const config = {
   projectId: 'crwn-db',
   storageBucket: 'crwn-db.appspot.com',
   messagingSenderId: '850995411664',
-  appId: '1:850995411664:web:7ddc01d597846f65'
+  appId: '1:850995411664:web:7ddc01d597846f65',
 };
 
 firebase.initializeApp(config);
@@ -29,7 +29,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData
+        ...additionalData,
       });
     } catch (error) {
       console.log('error creating user', error.message);
